@@ -5,16 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegistrationRequest {
-    private String userName;
-    private String emailAddress;
+public class ToDoCreationRequest {
+    private String userEmailAddress;
+    private String notePadName;
     private String password;
-    private String phoneNumber;
-    private LocalDateTime createdAt=LocalDateTime.now();
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/toDoApp/")
 @CrossOrigin(origins = "*")
 @AllArgsConstructor
+
 public class RegisterUserController {
 
     private final RegisterUserService registerUserService;

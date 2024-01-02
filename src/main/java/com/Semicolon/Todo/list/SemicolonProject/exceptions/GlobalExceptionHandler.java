@@ -21,4 +21,17 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
 
     }
+
+    @ExceptionHandler(NotePadCreationException.class)
+    public ResponseEntity<ApiResponse> NotePadCreationException(NotePadCreationException notePadCreationException) {
+        ApiResponse apiResponse = ApiResponse.builder()
+                .data(notePadCreationException.getMessage())
+                .httpStatus(HttpStatus.BAD_REQUEST)
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .isSuccessful(false)
+                .build();
+
+        return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
+
+    }
 }

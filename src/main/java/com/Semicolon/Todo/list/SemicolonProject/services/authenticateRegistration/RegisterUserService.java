@@ -17,19 +17,16 @@ public class RegisterUserService {
 
     private final ModelMapper modelMapper;
 
-
     public ApiResponse register(RegistrationRequest registrationRequest) throws RegistrationException {
 
-        boolean isRegistered = userService.findUserByEmailAddress(registrationRequest.getEmailAddress())!= null;
-
-        if (isRegistered) throw new RegistrationException(GenerateApiResponse.USER_ALREADY_EXIST);
+        boolean isRegistered = userService.findUserByEmailAddress(registrationRequest.getEmailAddress())!=null;
+        if (isRegistered)throw new RegistrationException(GenerateApiResponse.USER_ALREADY_EXIST);
 
         User user = modelMapper.map(registrationRequest, User.class);
 
         userService.save(user);
 
         return GenerateApiResponse.created(GenerateApiResponse.ACCOUNT_SUCCESSFULLY_CREATED);
-
-
     }
+
 }

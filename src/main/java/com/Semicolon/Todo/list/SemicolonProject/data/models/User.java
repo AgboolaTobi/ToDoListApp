@@ -17,11 +17,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    private String userName;
+    private String password;
     private String phoneNumber;
     private  String emailAddress;
     private LocalDateTime createdAt;
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<NotePad> notePads;
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private NotePad notePad;
 
 }
