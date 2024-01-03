@@ -12,7 +12,6 @@ import lombok.Setter;
 public class NotePadCreationRequest {
 
     private String userEmailAddress;
-    private String userName;
     private String notePadName;
     private String password;
 

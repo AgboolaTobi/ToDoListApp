@@ -34,4 +34,17 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
 
     }
+
+    @ExceptionHandler(ToDoCreationException.class)
+    public ResponseEntity<ApiResponse> ToDoCreationException(ToDoCreationException toDoCreationException) {
+        ApiResponse apiResponse = ApiResponse.builder()
+                .data(toDoCreationException.getMessage())
+                .httpStatus(HttpStatus.BAD_REQUEST)
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .isSuccessful(false)
+                .build();
+
+        return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
+
+    }
 }
