@@ -12,6 +12,8 @@ public class GenerateApiResponse {
     public static final String USER_DOES_NOT_HAVE_A_NOTEPAD_YET = "User does not have a notepad yet";
     public static final String TO_DO_SUCCESSFULLY_ADDED = "You have successfully added to your ToDo";
     public static final String NOTE_NAME_NOT_FOUND = "Notepad with this name note found";
+    public static final String NO_TODO_FOUND_FOR_USER = "This user does not have any ToDo at the moment.";
+    public static final String NO_NOTEPAD_FOUND_FOR_USER = "No notepad found for this user";
 
     public static ApiResponse created(Object data) {
         return ApiResponse.builder()

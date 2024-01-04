@@ -35,7 +35,6 @@ public class ToDoCreationService {
         String savedNotePad = notePad.getNotePadName();
         if (savedNotePad==null) throw new ToDoCreationException(GenerateApiResponse.NOTE_NAME_NOT_FOUND);
         ToDoTask toDoTask = new ToDoTask();
-
         toDoTask.setTitle(toDoCreationRequest.getToDoTitle());
         toDoTask.setBody(toDoCreationRequest.getToDoBody());
         toDoTask.setCreatedAt(LocalDateTime.now());

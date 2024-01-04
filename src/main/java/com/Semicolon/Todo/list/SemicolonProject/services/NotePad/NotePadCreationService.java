@@ -5,7 +5,6 @@ import com.Semicolon.Todo.list.SemicolonProject.data.models.User;
 import com.Semicolon.Todo.list.SemicolonProject.dtos.requests.NotePadCreationRequest;
 
 import com.Semicolon.Todo.list.SemicolonProject.exceptions.NotePadCreationException;
-import com.Semicolon.Todo.list.SemicolonProject.exceptions.RegistrationException;
 import com.Semicolon.Todo.list.SemicolonProject.services.authenticateRegistration.UserService;
 import com.Semicolon.Todo.list.SemicolonProject.utils.ApiResponse;
 import com.Semicolon.Todo.list.SemicolonProject.utils.GenerateApiResponse;
