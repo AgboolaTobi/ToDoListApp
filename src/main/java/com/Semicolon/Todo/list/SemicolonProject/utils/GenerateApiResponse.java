@@ -14,8 +14,18 @@ public class GenerateApiResponse {
     public static final String NOTE_NAME_NOT_FOUND = "Notepad with this name note found";
     public static final String NO_TODO_FOUND_FOR_USER = "This user does not have any ToDo at the moment.";
     public static final String NO_NOTEPAD_FOUND_FOR_USER = "No notepad found for this user";
+    public static final String TODO_SUCCESSFULLY_REMOVED = "ToDo task successfully removed";
 
     public static ApiResponse created(Object data) {
+        return ApiResponse.builder()
+                .data(data)
+                .httpStatus(HttpStatus.CREATED)
+                .statusCode(HttpStatus.CREATED.value())
+                .isSuccessful(true)
+                .build();
+    }
+
+    public static ApiResponse removed(Object data) {
         return ApiResponse.builder()
                 .data(data)
                 .httpStatus(HttpStatus.CREATED)

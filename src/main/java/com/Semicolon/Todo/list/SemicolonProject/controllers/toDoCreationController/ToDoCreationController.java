@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class ToDoCreationController {
 
     private final ToDoCreationService toDoCreationService;
-    @PostMapping("createTodo")
+    @PostMapping("createToDo")
     public ResponseEntity<ApiResponse> createTodo(@RequestBody ToDoCreationRequest toDoCreationRequest) throws ToDoCreationException {
         return new ResponseEntity<>(toDoCreationService.createToDoTask(toDoCreationRequest), HttpStatus.CREATED);
     }

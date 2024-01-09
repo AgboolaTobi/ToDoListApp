@@ -14,4 +14,9 @@ public class ToDoServiceImp implements ToDoTaskService{
     public ToDoTask save(ToDoTask toDoTask) {
         return toDoTaskRepository.save(toDoTask);
     }
+
+    @Override
+    public ToDoTask findByTitle(String toDoTitle) {
+        return toDoTaskRepository.findByTitle(toDoTitle);
+    }
 }

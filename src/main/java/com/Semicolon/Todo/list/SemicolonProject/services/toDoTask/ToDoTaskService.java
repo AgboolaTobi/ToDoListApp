@@ -4,4 +4,6 @@ import com.Semicolon.Todo.list.SemicolonProject.data.models.ToDoTask;
 
 public interface ToDoTaskService {
     ToDoTask save(ToDoTask toDoTask);
+
+    ToDoTask findByTitle(String title);
 }
